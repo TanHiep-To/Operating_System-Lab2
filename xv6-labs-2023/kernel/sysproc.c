@@ -100,3 +100,10 @@ sys_trace(void)
   myproc()-> syscall_trace = mask;
   return 0;
 }
+
+uint64
+sys_sysinfo(void) {
+  uint64 si;  // user pointer to struct sysinfo
+  argaddr(0, &si);
+  return sysinfo(si);
+}
