@@ -1,0 +1,11 @@
+Question : Looking at the backtrace output, which function called syscall?
+Trả lời : Kết quả cho biết syscall được gọi bởi usertrap, nó được chỉ ra trong
+output của backtrace
+
+Question : What is the value of p->trapframe->a7 and what does that
+value represent? (Hint: look user/initcode.S, the first user program xv6
+starts.)?
+
+Trả lời: 
+(gdb) p p->trapframe->a7
+$2 = 7
